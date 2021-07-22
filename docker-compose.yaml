@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+    web:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes: 
+            - database:/code/db
+        ports:
+            - '4567:4567'
+volumes:
+    database:
